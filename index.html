@@ -1,13 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <script defer src="./js/app.js"></script>
     <title>Qubic</title>
-</head>
-<body>
-    hello, updates.
-</body>
+  </head>
+  <body>
+    <section id="modal">
+      <div id="modal-content">
+        <h1>Welcome to Qubic!</h1>
+        <p>
+            To begin, hit play. You will enter the Qubic Zone (QZ). In the QZ, there are three dimensions.
+            Qubic is similar to tic-tac-toe meets connect four meets THE THIRD DIMENSION.
+        </p>
+        <h1>RULES:</h1>
+        <p id="rules"> 
+            1. You and another player will alternate turns placing pieces on any un-claimed spots on the board.<br><br>
+            2. If a player achieves four contiguous pieces placed, they win!<br><br>
+            3. Remember to watch the diagonals- you can win from corner to corner across all levels.
+        </p>
+        <h2>Good luck!</h2>
+        <button id="close-modal">Play</button>
+      </div>
+    </section>
+    <h1>Qubic</h1> <button id="reset">Reset</button>
+    <h2 id="message">Time to get your game on!</h2>
+    <section class="board">
+      <div class="level-one">
+      <div class="sqr" id="0"></div>
+      <div class="sqr" id="1"></div>
+      <div class="sqr" id="2"></div>
+      <div class="sqr" id="3"></div>
+      <div class="sqr" id="4"></div>
+      <div class="sqr" id="5"></div>
+      <div class="sqr" id="6"></div>
+      <div class="sqr" id="7"></div>
+      <div class="sqr" id="8"></div>
+      <div class="sqr" id="9"></div>
+      <div class="sqr" id="10"></div>
+      <div class="sqr" id="11"></div>
+      <div class="sqr" id="12"></div>
+      <div class="sqr" id="13"></div>
+      <div class="sqr" id="14"></div>
+      <div class="sqr" id="15"></div>
+      </div>
+    <div class="level-two">
+      <div class="sqr" id="16"></div>
+      <div class="sqr" id="17"></div>
+      <div class="sqr" id="18"></div>
+      <div class="sqr" id="19"></div>
+      <div class="sqr" id="20"></div>
+      <div class="sqr" id="21"></div>
+      <div class="sqr" id="22"></div>
+      <div class="sqr" id="23"></div>
+      <div class="sqr" id="24"></div>
+      <div class="sqr" id="25"></div>
+      <div class="sqr" id="26"></div>
+      <div class="sqr" id="27"></div>
+      <div class="sqr" id="28"></div>
+      <div class="sqr" id="29"></div>
+      <div class="sqr" id="30"></div>
+      <div class="sqr" id="31"></div>
+    </div>
+    <div class="level-three">
+      <div class="sqr" id="32"></div>
+      <div class="sqr" id="33"></div>
+      <div class="sqr" id="34"></div>
+      <div class="sqr" id="35"></div>
+      <div class="sqr" id="36"></div>
+      <div class="sqr" id="37"></div>
+      <div class="sqr" id="38"></div>
+      <div class="sqr" id="39"></div>
+      <div class="sqr" id="40"></div>
+      <div class="sqr" id="41"></div>
+      <div class="sqr" id="42"></div>
+      <div class="sqr" id="43"></div>
+      <div class="sqr" id="44"></div>
+      <div class="sqr" id="45"></div>
+      <div class="sqr" id="46"></div>
+      <div class="sqr" id="47"></div>
+    </div>
+    <div class="level-four">
+      <div class="sqr" id="48"></div>
+      <div class="sqr" id="49"></div>
+      <div class="sqr" id="50"></div>
+      <div class="sqr" id="51"></div>
+      <div class="sqr" id="52"></div>
+      <div class="sqr" id="53"></div>
+      <div class="sqr" id="54"></div>
+      <div class="sqr" id="55"></div>
+      <div class="sqr" id="56"></div>
+      <div class="sqr" id="57"></div>
+      <div class="sqr" id="58"></div>
+      <div class="sqr" id="59"></div>
+      <div class="sqr" id="60"></div>
+      <div class="sqr" id="61"></div>
+      <div class="sqr" id="62"></div>
+      <div class="sqr" id="63"></div>
+    </div>
+    </section>
+    <br>
+    
+  </body>
 </html>

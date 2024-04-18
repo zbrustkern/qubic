@@ -1,0 +1,81 @@
+/* Get a sweet font */
+
+body {
+    color: pink;
+    background-color: black;
+    font-family: "Press Start 2P", system-ui, sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .board {
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .level-one, .level-two, .level-three, .level-four {
+    display: flex;
+    flex-wrap: wrap;
+    width: 20vw;
+    margin: 1.5vh;
+    transform: skew(-30deg);
+    transition: .5s ease;
+    
+    &:hover {
+        width: 30vw;
+        margin: 3vh; 
+    }
+
+
+  }
+  .level-one {
+    transform: translate(25%) skew(-30deg)
+  }
+  .level-two {
+    transform: translate(25%) skew(-30deg)
+  }
+  .level-three {
+    transform: translate(25%) skew(-30deg)
+  }
+  .level-four {
+    transform: translate(25%) skew(-30deg)
+  }
+  
+  .sqr {
+    width: 20%;
+    aspect-ratio: 1/1;
+    border: 2px solid pink;
+    font-size: 2em;
+    text-align: center;
+    
+    margin: 0;
+
+    &:hover {
+        transform: scale(1.1);
+        border: 2px solid greenyellow;
+    }
+  }
+
+  #modal {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    z-index: 1;
+  }
+
+  #modal-content {
+    width: 60%;
+    text-align: center;
+    line-height: 1.1;
+  }
+
+  #rules {
+    text-align: left;
+    line-height: 1.5;
+  }
