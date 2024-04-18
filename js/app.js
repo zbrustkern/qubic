@@ -98,7 +98,8 @@ const boardEl = document.querySelector('.board')
 const messageEl = document.querySelector('#message')
 const resetBtnEl = document.querySelector('#reset')
 const squareEls = document.querySelectorAll('.sqr')
-const playBtnEl = document.querySelector('.close-modal')
+const playBtnEl = document.querySelector('#close-modal')
+const playAgainBtnEl = document.querySelector('#play-again')
 const openModalEl = document.querySelector('#open-modal')
 const endModalEl = document.querySelector('#end-modal')
 
@@ -196,6 +197,6 @@ function resetModal() {
 boardEl.addEventListener('click', handleClick)
 resetBtnEl.addEventListener('click', resetModal)
 playBtnEl.addEventListener('click', playGame)
-
+playAgainBtnEl.addEventListener('click', playGame)
 
 /*----------------------------- Runtime -----------------------------*/
