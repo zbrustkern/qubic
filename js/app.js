@@ -1,4 +1,17 @@
 /*-------------------------------- Constants --------------------------------*/
+// This section is meant to store previous game stats locally and retrieve them
+const localStorage = window.localStorage;
+let statsString, gameData
+
+if (!localStorage.getItem('stats')) {
+    zeroGameData()
+    statsString = JSON.stringify(gameData)
+} else {
+    statsString = localStorage.getItem('stats')
+    gameData = JSON.parse(statsString)
+}
+
+// This section defines all the possible winning combinations if the indices contained within the array(s) match.
 const winningCombos = [
     //76 winning combos, 10 per each level, 16 vertical only, 12 corner diagonal, and 8 "flat" middle rows 
     // level-one flat combos
@@ -90,12 +103,6 @@ const winningCombos = [
 
 /*---------------------------- Variables (state) ----------------------------*/
 let board, turn, winner, tie
-let gameData = {
-    xWins: 0,
-    oWins: 0,
-    ties: 0,
-}
-
 
 /*------------------------ Cached Element References ------------------------*/
 
@@ -108,6 +115,7 @@ const playAgainBtnEl = document.querySelector('#play-again')
 const openModalEl = document.querySelector('#open-modal')
 const endModalEl = document.querySelector('#end-modal')
 const statsEl = document.querySelector('#stats')
+const resetStatsBtnEl = document.querySelector('#reset-stats')
 
 
 /*-------------------------------- Functions --------------------------------*/
@@ -149,15 +157,21 @@ function handleClick(event) {
     // if (event.target.class != "sqr") return
     if (board[event.target.id] != '') return
     if (winner === true) return
-    placePiece(event.target.id)
+    placePiece(event.target)
     checkForWinner()
     checkForTie()
     switchPlayerTurn()
     render()
 }
 
-function placePiece(index) {
-    board[index] = turn
+function placePiece(squareClicked) {
+    if (turn === "X") {
+        board[squareClicked.id] = turn
+        // squareClicked.style.backgroundImage = "./assets/xImage.jpeg"
+    } else {
+        board[squareClicked.id] = turn
+        // squareClicked.style.backgroundImage = "./assets/xImage.jpeg"
+    }
 }
 
 function checkForWinner() {
@@ -169,10 +183,7 @@ function checkForWinner() {
             winner = true
             if (turn === "X") gameData.xWins++
             if (turn === "0") gameData.oWins++
-            endModalEl.style.display = "flex";
-            statsEl.innerText = `Player X has won ${gameData.xWins} times.
-            Player O has won ${gameData.oWins} times.
-            There have been ${gameData.ties} ties.`
+            displayEndModal()
         }
     })
 }
@@ -204,11 +215,35 @@ function resetModal() {
     openModalEl.style.display = "flex"
 }
 
+function zeroGameData() {
+    gameData = {
+        xWins: 0,
+        oWins: 0,
+        ties: 0,
+        }
+}
+
+function displayEndModal() {
+    endModalEl.style.display = "flex";
+    statsEl.innerText = `Player X has won ${gameData.xWins} times.
+    Player O has won ${gameData.oWins} times.
+    There have been ${gameData.ties} ties.`
+    statsString = JSON.stringify(gameData)
+    localStorage.setItem('stats', statsString)
+}
+
+function resetStats() {
+    localStorage.clear()
+    zeroGameData()
+    displayEndModal()
+}
+
 /*----------------------------- Event Listeners -----------------------------*/
 
 boardEl.addEventListener('click', handleClick)
 resetBtnEl.addEventListener('click', resetModal)
 playBtnEl.addEventListener('click', playGame)
 playAgainBtnEl.addEventListener('click', playGame)
+resetStatsBtnEl.addEventListener('click', resetStats)
 
 /*----------------------------- Runtime -----------------------------*/
