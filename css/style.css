@@ -59,8 +59,18 @@ body {
     }
   }
 
-  #modal {
+  #open-modal {
     display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 100vw;
+    height: 150vh;
+    background-color: black;
+    z-index: 1;
+  }
+
+  #end-modal {
+    display: none;
     justify-content: center;
     position: absolute;
     width: 100vw;

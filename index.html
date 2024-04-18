@@ -11,7 +11,7 @@
     <title>Qubic</title>
   </head>
   <body>
-    <section id="modal">
+    <section id="open-modal">
       <div id="modal-content">
         <h1>Welcome to Qubic!</h1>
         <p>
@@ -25,9 +25,26 @@
             3. Remember to watch the diagonals- you can win from corner to corner across all levels.
         </p>
         <h2>Good luck!</h2>
-        <button id="close-modal">Play</button>
+        <button class="close-modal">Play</button>
       </div>
     </section>
+
+    <section id="end-modal">
+      <div id="modal-content">
+        <h1>Congrats on playing!</h1>
+        <p>
+            you played a game!
+        </p>
+        <h1>Game Stats:</h1>
+        <p id="stats"> 
+            1. Statistic 1<br><br>
+            2. Statistic 2<br><br>
+            3. Statistic 3
+        </p>
+        <button class="close-modal">Play Again</button>
+      </div>
+    </section>
+
     <h1>Qubic</h1> <button id="reset">Reset</button>
     <h2 id="message">Time to get your game on!</h2>
     <section class="board">

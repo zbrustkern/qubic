@@ -98,8 +98,9 @@ const boardEl = document.querySelector('.board')
 const messageEl = document.querySelector('#message')
 const resetBtnEl = document.querySelector('#reset')
 const squareEls = document.querySelectorAll('.sqr')
-const playBtnEl = document.querySelector('#close-modal')
-const modalEl = document.querySelector('#modal')
+const playBtnEl = document.querySelector('.close-modal')
+const openModalEl = document.querySelector('#open-modal')
+const endModalEl = document.querySelector('#end-modal')
 
 
 /*-------------------------------- Functions --------------------------------*/
@@ -159,6 +160,7 @@ function checkForWinner() {
         (board[combo[2]] === board[combo[1]]) &&
         (board[combo[3]] === board[combo[2]])) {
             winner = true
+            endModalEl.style.display = "flex";
         }
     })
 }
@@ -179,17 +181,21 @@ function switchPlayerTurn() {
         }
 }
 
-function closeModal() {
-    console.log("button test")
-    modalEl.style.display = "none"
+function playGame() {
+    openModalEl.style.display = "none"
+    endModalEl.style.display = "none"
     init()
+}
+
+function resetModal() {
+    openModalEl.style.display = "flex"
 }
 
 /*----------------------------- Event Listeners -----------------------------*/
 
 boardEl.addEventListener('click', handleClick)
-resetBtnEl.addEventListener('click', init)
-playBtnEl.addEventListener('click', closeModal)
+resetBtnEl.addEventListener('click', resetModal)
+playBtnEl.addEventListener('click', playGame)
 
 
 /*----------------------------- Runtime -----------------------------*/
