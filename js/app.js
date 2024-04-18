@@ -90,6 +90,11 @@ const winningCombos = [
 
 /*---------------------------- Variables (state) ----------------------------*/
 let board, turn, winner, tie
+let gameData = {
+    xWins: 0,
+    oWins: 0,
+    ties: 0,
+}
 
 
 /*------------------------ Cached Element References ------------------------*/
@@ -102,6 +107,7 @@ const playBtnEl = document.querySelector('#close-modal')
 const playAgainBtnEl = document.querySelector('#play-again')
 const openModalEl = document.querySelector('#open-modal')
 const endModalEl = document.querySelector('#end-modal')
+const statsEl = document.querySelector('#stats')
 
 
 /*-------------------------------- Functions --------------------------------*/
@@ -120,7 +126,7 @@ function init() {
 
 function updateBoard() {
     board.forEach((sqr,idx) => {
-        squareEls[idx].innerText = board[idx]
+        squareEls[idx].innerText = sqr
     })
 }
 
@@ -161,7 +167,12 @@ function checkForWinner() {
         (board[combo[2]] === board[combo[1]]) &&
         (board[combo[3]] === board[combo[2]])) {
             winner = true
+            if (turn === "X") gameData.xWins++
+            if (turn === "0") gameData.oWins++
             endModalEl.style.display = "flex";
+            statsEl.innerText = `Player X has won ${gameData.xWins} times.
+            Player O has won ${gameData.oWins} times.
+            There have been ${gameData.ties} ties.`
         }
     })
 }
@@ -170,6 +181,7 @@ function checkForTie() {
     if (winner === true) return
     if (!(board.some(sqr => (sqr === '')))) {
         tie = true
+        gameData.ties++
     }
 }
 

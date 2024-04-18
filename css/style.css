@@ -26,7 +26,7 @@ body {
     
     &:hover {
         width: 30vw;
-        margin: 3vh; 
+        margin: 3vh;
     }
 }
 
@@ -51,12 +51,11 @@ body {
     border: 2px solid pink;
     font-size: 2em;
     text-align: center;
-    
     margin: 0;
 
     &:hover {
         transform: scale(1.1);
-        border: 2px solid greenyellow;
+        border: 2px solid aquamarine;
     }
   }
 
@@ -65,7 +64,11 @@ body {
     background-color: black;
     padding: 10px;
     font-family: "Press Start 2P", system-ui, sans-serif;
+    border-color: pink;
+
+    &:hover {
     border-color: aquamarine;
+    }
   }
 
   #open-modal {
@@ -83,7 +86,7 @@ body {
     justify-content: center;
     position: absolute;
     width: 100vw;
-    height: 100vh;
+    height: 150vh;
     background-color: black;
     z-index: 1;
   }
@@ -97,10 +100,29 @@ body {
   #rules {
     text-align: left;
     line-height: 1.5;
+    color: skyblue;
   }
 
   @media (width < 400px) {
+    .level-one, .level-two, .level-three, .level-four {
+        display: flex;
+        flex-wrap: wrap;
+        width: 20vw;
+        margin: 1.5vh;
+        transform: skew(-30deg);
+        
+        &:hover {
+            width: 20vw;
+            margin: 3vh;
+        }
+    }
     .sqr {
         width:15%;
+        font-size: .5em;
+
+        &:hover {
+            transform: scale(1.1);
+            border: 2px solid aquamarine;
+        }
     }
   }
