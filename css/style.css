@@ -74,6 +74,7 @@ body {
     background-color: black;
     z-index: 1;
     max-height: 25vh;
+    width: 100vw;
     line-height: .65;
     h1 {
         font-size: 2em;
@@ -142,6 +143,7 @@ body {
         background-color: black;
         z-index: 1;
         max-height: 15vh;
+        width: 100vw;
         margin: 0;
         
         h1 {
@@ -167,5 +169,11 @@ body {
             transform: scale(1.1);
             border: 3px solid aquamarine;
         }
+    }
+
+    #modal-content {
+        width: 90%;
+        text-align: center;
+        line-height: 1.1;
     }
 }
