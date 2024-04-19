@@ -3,14 +3,14 @@ body {
     color: pink;
     background-color: black;
     font-family: "Press Start 2P", system-ui, sans-serif;
-    margin: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0;
 }
 
 .board {
-    display:flex;
+    display: none;
     flex-wrap: wrap;
     align-items: center;
     flex-direction: column;
@@ -27,6 +27,16 @@ body {
     &:hover {
         width: 60vw;
         margin: 3vh;
+    }
+}
+
+.level-one {
+    margin-top: 30vh;
+
+    &:hover {
+        width: 60vw;
+        margin: 3vh;
+        margin-top: 30vh;
     }
 }
 
@@ -57,14 +67,26 @@ body {
     }
 }
 
+.game-header {
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    background-color: black;
+    z-index: 1;
+    max-height: 25vh;
+    line-height: .65;
+    h1 {
+        font-size: 2em;
+    }
+}
+
 #open-modal {
     display: flex;
     justify-content: center;
     position: absolute;
     width: 100vw;
-    height: 150vh;
+    height: 100vh;
     background-color: black;
-    z-index: 1;
 }
 
 #end-modal {
@@ -72,9 +94,8 @@ body {
     justify-content: center;
     position: absolute;
     width: 100vw;
-    height: 150vh;
+    height: 100vh;
     background-color: black;
-    z-index: 1;
 }
 
 #modal-content {
@@ -89,6 +110,8 @@ body {
     color: skyblue;
 }
 
+
+
 @media (width < 400px) {
     .level-one, .level-two, .level-three, .level-four {
         display: flex;
@@ -102,6 +125,43 @@ body {
             margin: 3vh;
         }
     }
+
+    .level-one {
+        margin-top: 17vh;
+        &:hover, &:focus {
+            width: 80vw;
+            margin: 3vh;
+            margin-top: 25vh;
+        }
+    }
+
+    .game-header {
+        align-items: center;
+        text-align: center;
+        position: fixed;
+        background-color: black;
+        z-index: 1;
+        max-height: 15vh;
+        margin: 0;
+        
+        h1 {
+            font-size: 1.5em;
+            padding: 0;
+            margin: 4px;
+        }
+
+        h2 {
+            font-size: .65em;
+            padding: 0;
+            margin: 2px;
+        }
+    }
+
+    .button {
+        font-size: .5em;
+        padding: 4px;
+    }
+
     .sqr {
         &:hover, &:focus {
             transform: scale(1.1);

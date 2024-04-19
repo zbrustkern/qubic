@@ -199,6 +199,7 @@ function switchPlayerTurn() {
 }
 
 function playGame() {
+    displayGameBoard()
     openModalEl.style.display = "none"
     endModalEl.style.display = "none"
     init()
@@ -206,6 +207,7 @@ function playGame() {
 
 function resetModal() {
     openModalEl.style.display = "flex"
+    hideGameBoard()
 }
 
 function zeroGameData() {
@@ -217,6 +219,7 @@ function zeroGameData() {
 }
 
 function displayEndModal() {
+    hideGameBoard()
     endModalEl.style.display = "flex";
     statsEl.innerText = `Player X has won ${gameData.xWins} times.
     Player O has won ${gameData.oWins} times.
@@ -229,6 +232,14 @@ function resetStats() {
     zeroGameData()
     displayEndModal()
     localStorage.clear()
+}
+
+function displayGameBoard() {
+    boardEl.style.display = "flex"
+}
+
+function hideGameBoard() {
+    boardEl.style.display = "none"
 }
 
 /*----------------------------- Event Listeners -----------------------------*/
