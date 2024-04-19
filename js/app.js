@@ -103,8 +103,9 @@ const winningCombos = [
 
 /*---------------------------- Variables (state) ----------------------------*/
 let board, turn, winner, tie 
-let xToken = "<img src='../assets/xToken.png' width='85%' alt='Player X's token.'>"
-let oToken = "<img src='../assets/oToken.png' width='85%' alt='Player O's token.'>"
+// Limited the alt text below to assist in rendering when images fail to load.
+let xToken = "<img src='../assets/xToken.png' width='85%' alt='X'>"
+let oToken = "<img src='../assets/oToken.png' width='85%' alt='0'>"
 
 /*------------------------ Cached Element References ------------------------*/
 
@@ -257,5 +258,3 @@ resetBtnEl.addEventListener('click', resetModal)
 playBtnEl.addEventListener('click', playGame)
 playAgainBtnEl.addEventListener('click', playGame)
 resetStatsBtnEl.addEventListener('click', resetStats)
-
-/*----------------------------- Runtime -----------------------------*/
