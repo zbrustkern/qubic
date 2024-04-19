@@ -104,8 +104,8 @@ const winningCombos = [
 /*---------------------------- Variables (state) ----------------------------*/
 let board, turn, winner, tie 
 // Limited the alt text below to assist in rendering when images fail to load.
-let xToken = "<img src='../assets/xtoken.png' width='85%' alt='X'>"
-let oToken = "<img src='../assets/otoken.png' width='85%' alt='0'>"
+let xToken = "<img src='assets/xtoken.png' width='85%' alt='X'>"
+let oToken = "<img src='assets/otoken.png' width='85%' alt='0'>"
 
 /*------------------------ Cached Element References ------------------------*/
 
