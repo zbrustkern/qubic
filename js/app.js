@@ -103,8 +103,8 @@ const winningCombos = [
 
 /*---------------------------- Variables (state) ----------------------------*/
 let board, turn, winner, tie 
-let xToken = "<img src='./assets/xToken.png' width='85%' alt='Player X's token.'>"
-let oToken = "<img src='./assets/oToken.png' width='85%' alt='Player O's token.'>"
+let xToken = "<img src='../assets/xToken.png' width='85%' alt='Player X's token.'>"
+let oToken = "<img src='../assets/oToken.png' width='85%' alt='Player O's token.'>"
 
 /*------------------------ Cached Element References ------------------------*/
 
