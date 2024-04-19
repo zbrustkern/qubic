@@ -147,8 +147,8 @@ body {
         
         h1 {
             font-size: 1.5em;
-            padding: 0;
-            margin: 4px;
+            padding-top: 8px;
+            margin: 2px;
         }
 
         h2 {
@@ -156,11 +156,10 @@ body {
             padding: 0;
             margin: 2px;
         }
-    }
-
-    .button {
-        font-size: .5em;
-        padding: 4px;
+        .button {
+            font-size: .5em;
+            padding: 4px;
+        }
     }
 
     .sqr {
