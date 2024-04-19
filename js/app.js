@@ -102,7 +102,9 @@ const winningCombos = [
 ]
 
 /*---------------------------- Variables (state) ----------------------------*/
-let board, turn, winner, tie
+let board, turn, winner, tie 
+let xToken = "<img src='./assets/xImage.jpeg' width='85%' alt='Player X's token.'>"
+let oToken = "<img src='./assets/oImage.jpeg' width='85%' alt='Player O's token.'>"
 
 /*------------------------ Cached Element References ------------------------*/
 
@@ -134,7 +136,13 @@ function init() {
 
 function updateBoard() {
     board.forEach((sqr,idx) => {
-        squareEls[idx].innerText = sqr
+        if (sqr === "X") {
+            squareEls[idx].innerHTML = xToken
+        } else if (sqr === "0") {
+            squareEls[idx].innerHTML = oToken
+        } else {
+            squareEls[idx].innerText = sqr
+        }
     })
 }
 
