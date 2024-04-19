@@ -1,5 +1,5 @@
 /*-------------------------------- Constants --------------------------------*/
-// This section is meant to store previous game stats locally and retrieve them
+// This section initializes a couple variables and then checks previous game stats locally and retrieves them if available
 const localStorage = window.localStorage;
 let statsString, gameData
 
@@ -154,7 +154,6 @@ function render() {
 }
 
 function handleClick(event) {
-    // if (event.target.class != "sqr") return
     if (board[event.target.id] != '') return
     if (winner === true) return
     placePiece(event.target)
@@ -165,13 +164,7 @@ function handleClick(event) {
 }
 
 function placePiece(squareClicked) {
-    if (turn === "X") {
         board[squareClicked.id] = turn
-        // squareClicked.style.backgroundImage = "./assets/xImage.jpeg"
-    } else {
-        board[squareClicked.id] = turn
-        // squareClicked.style.backgroundImage = "./assets/xImage.jpeg"
-    }
 }
 
 function checkForWinner() {
@@ -233,9 +226,9 @@ function displayEndModal() {
 }
 
 function resetStats() {
-    localStorage.clear()
     zeroGameData()
     displayEndModal()
+    localStorage.clear()
 }
 
 /*----------------------------- Event Listeners -----------------------------*/
