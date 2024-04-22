@@ -173,7 +173,7 @@ function handleClick(event) {
 }
 
 function placePiece(squareClicked) {
-        board[squareClicked.id] = turn
+    board[squareClicked.id] = turn
 }
 
 function checkForWinner() {
