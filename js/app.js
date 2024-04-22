@@ -230,7 +230,8 @@ function zeroGameData() {
 function displayEndModal() {
     hideGameBoard()
     endModalEl.style.display = "flex";
-    statsEl.innerText = `Player X has won ${gameData.xWins} times.
+    statsEl.innerText = `${turn} is the winner!
+    Player X has won ${gameData.xWins} times.
     Player O has won ${gameData.oWins} times.
     There have been ${gameData.ties} ties.`
     statsString = JSON.stringify(gameData)
