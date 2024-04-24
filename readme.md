@@ -17,7 +17,8 @@ The original wireframes of the planning process can be found [here](./assets/qub
 2. [Google Gemini](https://gemini.google.com/) helped with the concept art.
 
 ## Technologies Used
-This game is pretty simple- the entire thing is written in ![HTML Badge](https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white), ![CSS Badge](    https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white), and ![Javascript Badge](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+This game is pretty simple- the entire thing is written in:
+![HTML Badge](https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white), ![CSS Badge](    https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white), and ![Javascript Badge](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black).
 
 ## Next Steps
 Continued rendering enhancements across devices:
